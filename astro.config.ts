@@ -29,6 +29,9 @@ export default defineConfig({
         projects: {
           title: "Projects",
         },
+        models: {
+          title: "Models",
+        },
       },
       giscus: {
         repository: "louisescher/spectre",
