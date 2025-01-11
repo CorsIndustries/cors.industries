@@ -7,5 +7,23 @@
         },
         "text": "GitHub",
         "link": "https://github.com/CorsIndustries"
+    },
+    {
+        "id": 2,
+        "icon": {
+            "type": "lucide",
+            "name": "box"
+        },
+        "text": "Makerworld",
+        "link": "https://makerworld.com/it/@cors_industries"
+    },
+    {
+        "id": 3,
+        "icon": {
+            "type": "lucide",
+            "name": "cylinder"
+        },
+        "text": "Creality Cloud",
+        "link": "https://www.crealitycloud.com/user/8864994122"
     }
 ]
