@@ -11,8 +11,8 @@ interface OpenGraphInfo {
 
 interface OpenGraph {
   /*
-  * Data for the home page.
-  */
+   * Data for the home page.
+   */
   home: OpenGraphInfo;
   /**
    * Data for the blog page.
@@ -22,6 +22,11 @@ interface OpenGraph {
    * Data for the projects page.
    */
   projects: OpenGraphInfo;
+
+  /**
+   * Data for the 3d models page.
+   */
+  models: OpenGraphInfo;
 }
 
 interface GiscusOptions {
@@ -67,7 +72,7 @@ interface GiscusOptions {
   lang: string;
 }
 
-declare module 'spectre:globals' {
+declare module "spectre:globals" {
   /**
    * The name that should be displayed on the main page.
    */
