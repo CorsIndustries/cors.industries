@@ -19,12 +19,12 @@ export default defineConfig({
       name: "Cors Industries",
       openGraph: {
         home: {
-          title: "Spectre",
-          description: "A minimalistic theme for Astro.",
+          title: "Cors Industries",
+          description: "A blog and project showcase of tech",
         },
         blog: {
           title: "Blog",
-          description: "News and guides for Spectre.",
+          description: "News and guides",
         },
         projects: {
           title: "Projects",
