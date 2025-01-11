@@ -12,9 +12,10 @@ import { getEntry } from 'astro:content';
 import { render } from 'astro:content';
 import { name, openGraph } from 'spectre:globals';
 
-const [posts, projects, about, workExperience, quickInfo, socials] = await Promise.all([
+const [posts, projects, models, about, workExperience, quickInfo, socials] = await Promise.all([
 	getCollection('posts', (post) => post.data.draft !== true),
 	getCollection('projects'),
+    getCollection('models'),
 	getEntry('other', 'about'),
 	getCollection('workExperience'),
 	getCollection('quickInfo'),
@@ -90,6 +91,24 @@ const { Content: About } = await render(about!);
 							<span class="post-date">{project.data.date.toLocaleDateString()}</span>
 						</div>
 						<span>{project.data.description}</span>
+					</a>
+				))}
+			</div>
+		</Card>
+
+        <Card>
+            <div class="header-container">
+                <Icon type='lucide' name="folder-git" width={24} height={24} class='glow-icon' />
+				<h2>Latest 3D designs</h2>
+			</div>
+			<div class="content-container">
+                {models.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 2).map((model) => (
+					<a href={`/models/${model.id}`} class="post-container">
+						<div class="post-header">
+							<h3>{model.data.title}</h3>
+							<span class="post-date">{model.data.date.toLocaleDateString()}</span>
+						</div>
+						<span>{model.data.description}</span>
 					</a>
 				))}
 			</div>
