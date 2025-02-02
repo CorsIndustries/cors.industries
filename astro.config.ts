@@ -10,6 +10,7 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   site: "https://cors.industries",
+  base: "/",  
   output: "static",
   integrations: [
     expressiveCode(),
