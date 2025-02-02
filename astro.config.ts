@@ -9,7 +9,7 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://spectre.louisescher.dev",
+  site: "https://cors.industries",
   output: "static",
   integrations: [
     expressiveCode(),
